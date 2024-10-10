@@ -1,0 +1,8 @@
+pygame==2.6.1
+requests
+lxml
+beautifulsoup4
+spacy==3.2.4
+TTS
+
+

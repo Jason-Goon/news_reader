@@ -1,0 +1,42 @@
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore virtual environment
+venv/
+ENV/
+env/
+
+# Ignore audio files
+audio/*.wav
+audio/*.mp3
+
+# Ignore logs and system files
+*.log
+*.db
+*.sqlite3
+
+# Ignore temporary files and directories
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore configuration files
+*.ini
+*.cfg
+*.json
+
+# Ignore OBS and multimedia files (if generated)
+*.mkv
+*.mp4
+*.mov
+*.flv
+*.avi
+*.webm
+*.ogg
