@@ -6,9 +6,7 @@ This project aims to create a live AI streamer that continuously broadcasts summ
 
 ## Table of Contents
 
-- [Project Overview](#project-overview)
 - [Features](#features)
-- [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Workflow](#workflow)
