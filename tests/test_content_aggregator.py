@@ -8,7 +8,6 @@ class TestContentAggregator(unittest.TestCase):
 
     @patch('scripts.content_aggregator.requests.get')
     def test_fetch_news(self, mock_get):
-        # Mock the response from requests.get
         mock_get.return_value.status_code = 200
         mock_get.return_value.content = '''
             <rss>

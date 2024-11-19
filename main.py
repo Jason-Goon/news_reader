@@ -10,13 +10,13 @@ from scripts.content_aggregator import fetch_news
 from scripts.tts_processor import generate_tts
 from scripts.audio_output import play_audio
 from scripts.utils import chunk_text, clean_text
-import pygame  # Import pygame here
+import pygame 
 
-# Ensure the audio directory exists
+# audio dir 
 if not os.path.exists('audio'):
     os.makedirs('audio')
 
-# Initialize the queues
+# queues init 
 text_queue = queue.Queue()
 audio_queue = queue.Queue(maxsize=1)
 
@@ -57,14 +57,9 @@ def tts_worker():
             text_queue.task_done()
 
 if __name__ == "__main__":
-    # Initialize pygame mixer in the main thread
     pygame.mixer.init()
-
-    # Start threads
     threading.Thread(target=content_aggregator, daemon=True).start()
     threading.Thread(target=tts_worker, daemon=True).start()
-
-    # The main thread will act as the audio_player
     try:
         while True:
             audio_file = audio_queue.get()

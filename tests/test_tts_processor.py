@@ -10,7 +10,6 @@ class TestTTSProcessor(unittest.TestCase):
         text = "This is a test for TTS generation."
         output_file = "audio/test_output.wav"
 
-        # Ensure the audio directory exists
         if not os.path.exists('audio'):
             os.makedirs('audio')
 
@@ -18,7 +17,6 @@ class TestTTSProcessor(unittest.TestCase):
         self.assertTrue(os.path.isfile(output_file))
         self.assertTrue(os.path.getsize(output_file) > 0)
 
-        # Clean up
         os.remove(output_file)
 
 if __name__ == '__main__':

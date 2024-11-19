@@ -8,7 +8,6 @@ class TestAudioOutput(unittest.TestCase):
 
     @patch('scripts.audio_output.pygame.mixer.music')
     def test_play_audio(self, mock_music):
-        # Mock the pygame.mixer.music methods
         mock_music.load.return_value = None
         mock_music.play.return_value = None
         mock_music.get_busy.side_effect = [True, False]

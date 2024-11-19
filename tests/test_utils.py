@@ -1,12 +1,10 @@
 # /tests/test_utils.py
-
 import unittest
 from scripts.utils import chunk_text
-
 class TestUtils(unittest.TestCase):
 
     def test_chunk_text(self):
-        text = "Word " * 50  # 50 words
+        text = "Word " * 50 
         chunks = chunk_text(text, max_length=100)
         self.assertIsInstance(chunks, list)
         self.assertTrue(len(chunks) > 0)

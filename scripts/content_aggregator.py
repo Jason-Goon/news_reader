@@ -35,7 +35,6 @@ def fetch_news():
     return news_list
 
 def summarize_text(text):
-    # Your existing summarization code
     sentences = re.findall(r'[^.!?]+[.!?]', text)
     sentences = [s.strip() for s in sentences]
     summary_sentences = sentences[:2]

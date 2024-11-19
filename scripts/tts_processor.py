@@ -2,7 +2,6 @@
 
 from TTS.api import TTS
 
-# Initialize the TTS model globally to avoid reloading it every time
 tts_model = TTS(model_name="tts_models/en/ljspeech/glow-tts", progress_bar=False, gpu=False)
 
 def generate_tts(text, output_file):
